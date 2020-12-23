@@ -23,7 +23,7 @@ def Parse_CLI():
     ctype = sys.argv[1]      
     cmd = sys.argv[2]
     params = sys.argv[3:]
-    if params.find('APIKEY') or params.find('SECKEY'):
+    # if params.find('APIKEY') or params.find('SECKEY'):
 
     return ctype, cmd, params, my_apikey, my_secretkey
 
@@ -60,7 +60,7 @@ Print_Welcome()
 my_apikey = ''
 my_secretkey = ''
 ctype, cmd, params, my_apikey, my_secretkey = Parse_CLI()
-if my_apikey = '' or my_secretkey = '':
+if my_apikey == '' or my_secretkey == '':
     my_apikey, my_secretkey = c.read_config()
 print('Input Your MSG : ', ctype, cmd, params)
 sendcmd(params, ctype=ctype, command=cmd, apikey=my_apikey, secretkey=my_secretkey)
