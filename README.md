@@ -11,9 +11,10 @@
    + set KTCSEC={SECkey입력}
 
 
-### install
+### Library install
 ```
 sudo apt install python3-dev
 pip3 install pandas
 pip3 install requests
+pip3 install urllib3 
 ```
