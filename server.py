@@ -1,3 +1,17 @@
+#
+#  kt cloud SDK v1.0
+#
+#  Copyright (c) 2020 kt corp. All rights reserved.
+#
+#  This is a proprietary software of kt corp
+#  and you may not use this file except in compliance
+#  with license agreement with kt corp.
+#  Any redistribution or use of this software,
+#  with or without modification shall be strictly
+#  prohibited without prior written approval of kt corp,
+#  and the copyright notice above does not evidence
+#  any actual or intended publication of such software.
+#
 import common as c
 
 
@@ -16,7 +30,7 @@ def deployVirtualMachine(**kargs):
     my_apikey, my_secretkey = c.read_config()
 
     kargs['command'] = 'deployVirtualMachine'
-    kargs['response']='json'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
 
     if not 'zone' in kargs:
@@ -69,8 +83,8 @@ def destroyVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='destroyVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'destroyVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -96,8 +110,8 @@ def startVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='startVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'startVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -123,8 +137,8 @@ def stopVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='stopVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'stopVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -150,8 +164,8 @@ def rebootVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='rebootVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'rebootVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -177,8 +191,8 @@ def restoreVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='restoreVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'restoreVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -209,8 +223,8 @@ def updateVirtualMachine(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='updateVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'updateVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey   
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -236,8 +250,8 @@ def createVolume(**kargs):
     M2Bool = c.IsM2(ZoneName)
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createVolume'
-    kargs['response']='json'
+    kargs['command'] = 'createVolume'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
 
     return c.makerequest(kargs, baseurl, my_secretkey)
@@ -266,8 +280,8 @@ def attachVolume(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='attachVolume'
-    kargs['response']='json'
+    kargs['command'] = 'attachVolume'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
 
     return c.makerequest(kargs, baseurl, my_secretkey)
@@ -291,8 +305,8 @@ def detachVolume(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
     
-    kargs['command']='detachVolume'
-    kargs['response']='json'
+    kargs['command'] = 'detachVolume'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -315,8 +329,8 @@ def deleteVolume(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteVolume'
-    kargs['response']='json'
+    kargs['command'] = 'deleteVolume'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -348,8 +362,8 @@ def resizeVolume(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='resizeVolume'
-    kargs['response']='json'
+    kargs['command'] = 'resizeVolume'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -369,8 +383,8 @@ def associateIpAddress(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='associateIpAddress'
-    kargs['response']='json'
+    kargs['command'] = 'associateIpAddress'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -393,8 +407,8 @@ def disassociateIpAddress(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='disassociateIpAddress'
-    kargs['response']='json'
+    kargs['command'] = 'disassociateIpAddress'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -429,8 +443,8 @@ def createPortForwardingRule(**kargs):
     kargs['virtualmachineid'] = kargs['vmid']
     del kargs['vmid']
 
-    kargs['command']='createPortForwardingRule'
-    kargs['response']='json'
+    kargs['command'] = 'createPortForwardingRule'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -453,8 +467,8 @@ def deletePortForwardingRule(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deletePortForwardingRule'
-    kargs['response']='json'
+    kargs['command'] = 'deletePortForwardingRule'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -483,8 +497,8 @@ def createFirewallRule(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createFirewallRule'
-    kargs['response']='json'
+    kargs['command'] = 'createFirewallRule'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -506,8 +520,8 @@ def deleteFirewallRule(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteFirewallRule'
-    kargs['response']='json'
+    kargs['command'] = 'deleteFirewallRule'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -539,8 +553,8 @@ def createNetwork(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createNetwork'
-    kargs['response']='json'
+    kargs['command'] = 'createNetwork'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -562,8 +576,8 @@ def deleteNetwork(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteNetwork'
-    kargs['response']='json'
+    kargs['command'] = 'deleteNetwork'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -591,8 +605,8 @@ def addNicToVirtualMachine(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='addNicToVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'addNicToVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -620,8 +634,8 @@ def removeNicFromVirtualMachine(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='removeNicFromVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'removeNicFromVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -654,8 +668,8 @@ def createOverlay(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createOverlay'
-    kargs['response']='json'
+    kargs['command'] = 'createOverlay'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -675,8 +689,8 @@ def listOverlays(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listOverlays'
-    kargs['response']='json'
+    kargs['command'] = 'listOverlays'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -699,8 +713,8 @@ def deleteOverlay(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteOverlay'
-    kargs['response']='json'
+    kargs['command'] = 'deleteOverlay'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -723,8 +737,8 @@ def createSSHKeyPair(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createSSHKeyPair'
-    kargs['response']='json'
+    kargs['command'] = 'createSSHKeyPair'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -747,8 +761,8 @@ def deleteSSHKeyPair(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteSSHKeyPair'
-    kargs['response']='json'
+    kargs['command'] = 'deleteSSHKeyPair'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -776,8 +790,8 @@ def enableStaticNat(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='enableStaticNat'
-    kargs['response']='json'
+    kargs['command'] = 'enableStaticNat'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -800,8 +814,8 @@ def disableStaticNat(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='disableStaticNat'
-    kargs['response']='json'
+    kargs['command'] = 'disableStaticNat'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -842,8 +856,8 @@ def createOverlayNetwork(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createOverlayNetwork'
-    kargs['response']='json'
+    kargs['command'] = 'createOverlayNetwork'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -871,8 +885,8 @@ def updateVirtualMachineForCharge(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='updateVirtualMachineForCharge'
-    kargs['response']='json'
+    kargs['command'] = 'updateVirtualMachineForCharge'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -892,8 +906,8 @@ def listAvailableProductTypes(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listAvailableProductTypes'
-    kargs['response']='json'
+    kargs['command'] = 'listAvailableProductTypes'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -902,6 +916,7 @@ def listVirtualMachines(**kargs):
     """ List VirtualMachines
     * Args:
         - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
+        - vmid(String, Optional) : VirtualMachine ID
     * Examples : print(server.listVirtualMachines(zone='KR-M'))
     """    
     my_apikey, my_secretkey = c.read_config()
@@ -911,10 +926,12 @@ def listVirtualMachines(**kargs):
     kargs['zoneid'] = c.getzoneidbyhname(kargs['zone'])
     M2Bool = c.IsM2(kargs['zone'])
     del kargs['zone']
+    kargs['virtualmachineid'] = kargs['vmid']
+    del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listVirtualMachines'
-    kargs['response']='json'
+    kargs['command'] = 'listVirtualMachines'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -934,8 +951,8 @@ def checkVirtualMachineName(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='checkVirtualMachineName'
-    kargs['response']='json'
+    kargs['command'] = 'checkVirtualMachineName'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -959,8 +976,8 @@ def listVirtualMachineForCharge(**kargs):
         del kargs['vmid']    
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listVirtualMachineForCharge'
-    kargs['response']='json'
+    kargs['command'] = 'listVirtualMachineForCharge'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -980,8 +997,8 @@ def listPublicIpAddresses(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listPublicIpAddresses'
-    kargs['response']='json'
+    kargs['command'] = 'listPublicIpAddresses'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1001,8 +1018,8 @@ def listPortForwardingRules(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listPortForwardingRules'
-    kargs['response']='json'
+    kargs['command'] = 'listPortForwardingRules'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1022,8 +1039,8 @@ def listFirewallRules(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listFirewallRules'
-    kargs['response']='json'
+    kargs['command'] = 'listFirewallRules'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1043,8 +1060,8 @@ def listAccounts(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listAccounts'
-    kargs['response']='json'
+    kargs['command'] = 'listAccounts'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1064,8 +1081,8 @@ def listEvents(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listEvents'
-    kargs['response']='json'
+    kargs['command'] = 'listEvents'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1085,8 +1102,8 @@ def listSnapshots(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listSnapshots'
-    kargs['response']='json'
+    kargs['command'] = 'listSnapshots'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1106,8 +1123,8 @@ def listSnapshotSize(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listSnapshotSize'
-    kargs['response']='json'
+    kargs['command'] = 'listSnapshotSize'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1130,8 +1147,8 @@ def listTemplates(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listTemplates'
-    kargs['response']='json'
+    kargs['command'] = 'listTemplates'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1151,8 +1168,8 @@ def listNetworks(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listNetworks'
-    kargs['response']='json'
+    kargs['command'] = 'listNetworks'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1172,8 +1189,8 @@ def listNetworkFlatRate(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listNetworkFlatRate'
-    kargs['response']='json'
+    kargs['command'] = 'listNetworkFlatRate'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1199,8 +1216,8 @@ def listNetworkUsages(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listNetworkUsages'
-    kargs['response']='json'
+    kargs['command'] = 'listNetworkUsages'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1212,8 +1229,8 @@ def listZones(**kargs):
     import time
     my_apikey, my_secretkey = c.read_config()
 
-    kargs['command']='listZones'
-    kargs['response']='json'
+    kargs['command'] = 'listZones'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
 
     baseurl1 = c.geturl(ctype='server', m2=False)
@@ -1251,8 +1268,8 @@ def listSSHKeyPairs(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listSSHKeyPairs'
-    kargs['response']='json'
+    kargs['command'] = 'listSSHKeyPairs'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1272,8 +1289,8 @@ def listTags(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listTags'
-    kargs['response']='json'
+    kargs['command'] = 'listTags'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1282,6 +1299,7 @@ def listVolumes(**kargs):
     """ List Volumes
     * Args:
         - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
+        - vmid(String, Optional) : VirtualMachine ID
     * Examples : print(server.listVolumes(zone='KR-M'))
     """    
     my_apikey, my_secretkey = c.read_config()
@@ -1291,10 +1309,12 @@ def listVolumes(**kargs):
     kargs['zoneid'] = c.getzoneidbyhname(kargs['zone'])
     M2Bool = c.IsM2(kargs['zone'])
     del kargs['zone']
+    kargs['virtualmachineid'] = kargs['vmid']
+    del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='listVolumes'
-    kargs['response']='json'
+    kargs['command'] = 'listVolumes'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1319,8 +1339,8 @@ def resetPasswordForVirtualMachine(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='resetPasswordForVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'resetPasswordForVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1348,8 +1368,8 @@ def changeServiceForVirtualMachine(**kargs):
     del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='changeServiceForVirtualMachine'
-    kargs['response']='json'
+    kargs['command'] = 'changeServiceForVirtualMachine'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1378,8 +1398,8 @@ def updateUsagePlanTypeForServer(**kargs):
     del kargs['zone']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='updateUsagePlanTypeForServer'
-    kargs['response']='json'
+    kargs['command'] = 'updateUsagePlanTypeForServer'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1409,8 +1429,8 @@ def changeServiceForVirtualMachineVerify(**kargs):
     del kargs['vmid']    
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='changeServiceForVirtualMachineVerify'
-    kargs['response']='json'
+    kargs['command'] = 'changeServiceForVirtualMachineVerify'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1433,8 +1453,8 @@ def createSnapshot(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createSnapshot'
-    kargs['response']='json'
+    kargs['command'] = 'createSnapshot'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1457,8 +1477,8 @@ def deleteSnapshot(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteSnapshot'
-    kargs['response']='json'
+    kargs['command'] = 'deleteSnapshot'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1492,8 +1512,8 @@ def createTemplate(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='createTemplate'
-    kargs['response']='json'
+    kargs['command'] = 'createTemplate'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1516,8 +1536,8 @@ def deleteTemplate(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='deleteTemplate'
-    kargs['response']='json'
+    kargs['command'] = 'deleteTemplate'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1543,8 +1563,8 @@ def updateTemplate(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='updateTemplate'
-    kargs['response']='json'
+    kargs['command'] = 'updateTemplate'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1573,8 +1593,8 @@ def copyTemplate(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='copyTemplate'
-    kargs['response']='json'
+    kargs['command'] = 'copyTemplate'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1605,8 +1625,8 @@ def createTags(**kargs):
     del kargs['mytagkey']
     del kargs['mytagvalue']
 
-    kargs['command']='createTags'
-    kargs['response']='json'
+    kargs['command'] = 'createTags'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1636,8 +1656,8 @@ def deleteTags(**kargs):
     del kargs['mytagkey']
     del kargs['mytagvalue']
 
-    kargs['command']='deleteTags'
-    kargs['response']='json'
+    kargs['command'] = 'deleteTags'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
@@ -1660,167 +1680,8 @@ def queryAsyncJobResult(**kargs):
     del kargs['zone'] 
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
-    kargs['command']='queryAsyncJobResult'
-    kargs['response']='json'
+    kargs['command'] = 'queryAsyncJobResult'
+    kargs['response'] = 'json'
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
-# EOF
-
-
-
-# def createL2OverlayConnection(**kargs):
-#
-#     my_apikey, my_secretkey = c.read_config()
-#
-#     if zone:
-#         if 'M2' in zone or 'm2' in zone :
-#             baseurl = c.geturl(ctype='server', m2=True)
-#         else:
-#             baseurl = c.geturl(ctype='server', m2=False)
-#
-#     kargs['command']='createL2OverlayConnection'
-#     kargs['response']='json'
-#     kargs['apikey'] = my_apikey
-#
-#     if not 'overlaynetworkid' in kargs:
-#         return "Missing required argument 'overlaynetworkid'"
-#
-#     return c.makerequest(kargs, baseurl, my_secretkey)
-#
-# def deleteL2OverlayConnection(**kargs):
-#
-#     my_apikey, my_secretkey = c.read_config()
-#
-#     if zone:
-#         if 'M2' in zone or 'm2' in zone :
-#             baseurl = c.geturl(ctype='server', m2=True)
-#         else:
-#             baseurl = c.geturl(ctype='server', m2=False)
-#
-#     kargs['command']='deleteL2OverlayConnection'
-#     kargs['response']='json'
-#     kargs['apikey'] = my_apikey
-#
-#     if not 'overlaynetworkid' in kargs:
-#         return "Missing required argument 'overlaynetworkid'"
-#
-#     return c.makerequest(kargs, baseurl, my_secretkey)
-#
-# def interAzStatus(**kargs):
-#
-#     my_apikey, my_secretkey = c.read_config()
-#
-#     if zone:
-#         if 'M2' in zone or 'm2' in zone :
-#             baseurl = c.geturl(ctype='server', m2=True)
-#         else:
-#             baseurl = c.geturl(ctype='server', m2=False)
-#
-#     kargs['command']='interAzStatus'
-#     kargs['response']='json'
-#     kargs['apikey'] = my_apikey
-#
-#     if not 'destnetworkid' in kargs:
-#         return "Missing required argument 'destnetworkid'"
-#     if not 'sourcenetworkid' in kargs:
-#         return "Missing required argument 'sourcenetworkid'"
-#
-#     return c.makerequest(kargs, baseurl, my_secretkey)
-#
-#
-#
-# def requestForInterAz(**kargs):
-#
-#     my_apikey, my_secretkey = c.read_config()
-#
-#     if zone:
-#         if 'M2' in zone or 'm2' in zone :
-#             baseurl = c.geturl(ctype='server', m2=True)
-#         else:
-#             baseurl = c.geturl(ctype='server', m2=False)
-#
-#     kargs['command']='requestForInterAz'
-#     kargs['response']='json'
-#     kargs['apikey'] = my_apikey
-#
-#     if not 'destnetworkid' in kargs:
-#         return "Missing required argument 'destnetworkid'"
-#     if not 'sourcenetworkid' in kargs:
-#         return "Missing required argument 'sourcenetworkid'"
-#     if not 'destzoneid' in kargs:
-#         return "Missing required argument 'destzoneid'"
-#     if not 'sourcezoneid' in kargs:
-#         return "Missing required argument 'sourcezoneid'"
-#
-#     return c.makerequest(kargs, baseurl, my_secretkey)
-
-
-# def updateIpAddress(**kargs):
-#     """ Update IP Address Desc
-#     * Args:
-#         - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
-#         - id(String, Required) : public IP ID
-#     * Examples : 
-#     """    
-#     my_apikey, my_secretkey = c.read_config()
-
-#     if not 'zone' in kargs:
-#         return c.printZoneHelp()
-#     # if not 'id' in kargs:
-#     #     return '[ktcloud] Missing required argument \"id\" (additional public IP id)'
-#     kargs['zoneid'] = c.getzoneidbyhname(kargs['zone'])
-#     M2Bool = c.IsM2(kargs['zone'])
-#     del kargs['zone']
-#     baseurl = c.geturl(ctype='server', m2=M2Bool)
-
-#     kargs['command']='disassociateIpAddress'
-#     kargs['response']='json'
-#     kargs['apikey'] = my_apikey
-#     return c.makerequest(kargs, baseurl, my_secretkey)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
+# End Of File

@@ -1,3 +1,17 @@
+#
+#  kt cloud SDK v1.0
+#
+#  Copyright (c) 2020 kt corp. All rights reserved.
+#
+#  This is a proprietary software of kt corp
+#  and you may not use this file except in compliance
+#  with license agreement with kt corp.
+#  Any redistribution or use of this software,
+#  with or without modification shall be strictly
+#  prohibited without prior written approval of kt corp,
+#  and the copyright notice above does not evidence
+#  any actual or intended publication of such software.
+#
 import sys
 import os
 import common as c
@@ -5,7 +19,7 @@ import common as c
 
 def Print_Welcome():
     print('-----------------------------------------------------------------------------------------------------------------')
-    print('[ktcloud] ctype    :  server database lb gslb nas waf  ')
+    print('[ktcloud] ctype    :  server database loadbalancer gslb nas waf  ')
     print('[ktcloud] command  :  See Ref. https://cloud.kt.com/portal/openapi-guide/common-api_prologue-intro_api_intro  ')
     print('[ktcloud] Usage    :  python ktcloud.py < ctype > < command > < param_name1=param1, param_name2=param2,, > ')
     print('[ktcloud] example  :  python ktcloud.py server startVirtualMachine zone=KR-M id=yourid ')
@@ -48,7 +62,7 @@ def sendcmd(params, **kargs):
         baseurl = c.geturl(ctype=kargs['ctype'], m2=M2Bool)
     else:
         baseurl = c.geturl(ctype=kargs['ctype'], m2=False)
-    kargs['response']='json'
+    kargs['response'] = 'json'
     del kargs['ctype']
     secretkey = kargs['secretkey']
     del kargs['secretkey']

@@ -12,4 +12,4 @@ import server
 
 # simple example
 print(server.deleteVolume(zone='KR-M', \
-    id='7f933f86-e8bf-4600-9423-09e8f1c84460'))
+    id='053510f5-19e5-491c-a40c-b46318e9c26d'))

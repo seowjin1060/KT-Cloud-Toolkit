@@ -12,4 +12,4 @@ import server
 
 # simple example
 print(server.resetPasswordForVirtualMachine(zone='KR-M', \
-    vmid='47d2ea4c-d434-418b-a854-c99054abeff7'))
+    vmid='394c1077-8816-4fce-b371-d3ffea2859e5'))

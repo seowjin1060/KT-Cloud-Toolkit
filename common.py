@@ -1,3 +1,17 @@
+#
+#  kt cloud SDK v1.0
+#
+#  Copyright (c) 2020 kt corp. All rights reserved.
+#
+#  This is a proprietary software of kt corp
+#  and you may not use this file except in compliance
+#  with license agreement with kt corp.
+#  Any redistribution or use of this software,
+#  with or without modification shall be strictly
+#  prohibited without prior written approval of kt corp,
+#  and the copyright notice above does not evidence
+#  any actual or intended publication of such software.
+#
 import os
 import sys    
 import platform
@@ -124,6 +138,12 @@ def makerequest(request, baseurl, my_secretkey):
     response = requests.get(req)
     res = response.json()
     return res
+    # if cutA is None and cutB is None:
+    #     return res
+    # elif cutA is not None and cutB is None:
+    #     return res[cutA]
+    # else:
+    #     return res[cutA][cutB]
 
 
 def makerequest_debug(request, baseurl, my_secretkey):

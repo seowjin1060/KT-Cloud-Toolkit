@@ -11,8 +11,10 @@ import server
     # 4) KR-M2 : KOR-Seoul M2 Zone
 
 # simple example
-print(server.createNetwork(zone='KR-M', \
-    displaytext='AAA22',\
-    account='EPC_M191867_S1820', \
-    domainid='849e8028-dafc-4ad6-a649-800221fdf834', \
-    ipcount='32'))
+print(server.createNetwork(
+    zone='KR-M',
+    displaytext='AAA22',
+    account='EPC_M191867_S1820',
+    domainid='849e8028-dafc-4ad6-a649-800221fdf834',
+    ipcount='32'
+))

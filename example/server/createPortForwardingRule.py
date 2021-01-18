@@ -11,8 +11,12 @@ import server
     # 4) KR-M2 : KOR-Seoul M2 Zone
 
 # simple example
-print(server.createPortForwardingRule(zone='KR-M', \
-    ipaddressid='3a304bed-d7c0-4836-a31f-c4e10d2ab0be', \
-    privateport='5555', protocol='tcp', publicport='5555', \
-    vmid='47d2ea4c-d434-418b-a854-c99054abeff7'))
+print(server.createPortForwardingRule(
+    zone='KR-M',
+    ipaddressid='3a304bed-d7c0-4836-a31f-c4e10d2ab0be',
+    privateport='5555',
+    protocol='tcp',
+    publicport='5555',
+    vmid='47d2ea4c-d434-418b-a854-c99054abeff7'
+))
 

@@ -11,7 +11,8 @@ import server
     # 4) KR-M2 : KOR-Seoul M2 Zone
 
 # simple example
-print(server.updateVirtualMachine(zone='KR-M', \
-    vmid='47d2ea4c-d434-418b-a854-c99054abeff7', \
-    displayname='AATest123'))
+print(server.updateVirtualMachine(zone='KR-M2', \
+    vmid='6a51fb2c-62c2-406b-983d-3fd76f2b07f6',
+    name ='kkh-redis-template',
+    displayname='kkh-redis-template'))
 
