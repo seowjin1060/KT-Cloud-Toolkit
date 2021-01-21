@@ -34,13 +34,6 @@ ZONE_LIST = pd.DataFrame(
     columns=['zone_ssname', 'zone_sname', 'zone_hname', 'zone_fname', 'zone_id'])
 
 
-enckey = [0x10, 0x01, 0x15, 0x1B, 0xA1, 0x11, 0x57, 0x72, 0x6C, 0x21, 0x56, 0x57, 0x62, 0x16, 0x05, 0x3D, \
-    0xFF, 0xFE, 0x11, 0x1B, 0x21, 0x31, 0x57, 0x72, 0x6B, 0x21, 0xA6, 0xA7, 0x6E, 0xE6, 0xE5, 0x3F]
-BS = 16
-pad = (lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS).encode())
-unpad = (lambda s: s[:-ord(s[len(s)-1:])])
-
-
 def printZoneHelp():
     print('Missing required argument \"zone\" \n \
   - KR-CA : KOREA-Central A Zone \n \
@@ -130,7 +123,6 @@ def read_config():
 
 def makerequest(request, baseurl, my_secretkey):
     secret_key = bytes(my_secretkey, 'UTF-8')
-    # secret_key = bytes(my_secretkey.encode('UTF-8'))
     sig_str = '&'.join(['='.join([k,urllib.parse.quote_plus(request[k]).replace('+','%20')]) for k in sorted(request.keys(), key=str.lower)])
     make_request = bytes(sig_str, 'UTF-8')
     sig = urllib.parse.quote_plus(base64.b64encode(hmac.new(secret_key, make_request.lower(), digestmod=hashlib.sha1).digest()))
@@ -138,12 +130,6 @@ def makerequest(request, baseurl, my_secretkey):
     response = requests.get(req)
     res = response.json()
     return res
-    # if cutA is None and cutB is None:
-    #     return res
-    # elif cutA is not None and cutB is None:
-    #     return res[cutA]
-    # else:
-    #     return res[cutA][cutB]
 
 
 def makerequest_debug(request, baseurl, my_secretkey):

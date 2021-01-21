@@ -13,6 +13,6 @@ import server
 # simple example
 print(server.updateVirtualMachine(zone='KR-M2', \
     vmid='6a51fb2c-62c2-406b-983d-3fd76f2b07f6',
-    name ='kkh-redis-template',
-    displayname='kkh-redis-template'))
+    name ='redis-template',
+    displayname='redis-template'))
 
