@@ -916,7 +916,6 @@ def listVirtualMachines(**kargs):
     """ List VirtualMachines
     * Args:
         - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
-        - vmid(String, Optional) : VirtualMachine ID
     * Examples : print(server.listVirtualMachines(zone='KR-M'))
     """    
     my_apikey, my_secretkey = c.read_config()
@@ -926,8 +925,6 @@ def listVirtualMachines(**kargs):
     kargs['zoneid'] = c.getzoneidbyhname(kargs['zone'])
     M2Bool = c.IsM2(kargs['zone'])
     del kargs['zone']
-    kargs['virtualmachineid'] = kargs['vmid']
-    del kargs['vmid']
     baseurl = c.geturl(ctype='server', m2=M2Bool)
 
     kargs['command'] = 'listVirtualMachines'
