@@ -88,6 +88,52 @@ def destroyVirtualMachine(**kargs):
     kargs['apikey'] = my_apikey
     return c.makerequest(kargs, baseurl, my_secretkey)
 
+def listVirtualIps(**kargs):
+        """ Destroy your VirtualMachine(VM) 
+    * Args:
+        - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
+        - vmid(String, Required): VM id to destory. 
+        """
+    my_apikey, my_secretkey = c.read_config()
+
+    kargs['command'] = 'listVirtualIps'
+    kargs['response'] = 'json'
+    kargs['apikey'] = my_apikey
+
+    if not 'zone' in kargs:
+        return 'Missing required argument \"zone\" \n \
+  - KR-CA : KOREA-Central A Zone \n \
+  - KR-CB : KOREA-Central B Zone \n \
+  - KR-M  : KOREA M Zone  \n \
+  - KR-M2 : KOREA M2 Zone '
+    ZoneName = kargs['zone']
+    del kargs['zoneid']
+   # kargs['zoneid'] = c.getzoneidbyhname(ZoneName)
+    # M2Bool = c.IsM2(ZoneName)
+    baseurl = c.geturl(ctype='server', m2=False)
+    print(baseurl)
+    return c.makerequest(kargs, baseurl, my_secretkey)
+
+
+def deployVirtualIps(**kargs):    
+    my_apikey, my_secretkey = c.read_config()
+
+    kargs['command'] = 'deployVirtual'
+    kargs['response'] = 'json'
+    kargs['apikey'] = my_apikey
+
+    if not 'zone' in kargs:
+        return 'Missing required argument \"zone\" \n \
+  - KR-CA : KOREA-Central A Zone \n \
+  - KR-CB : KOREA-Central B Zone \n \
+  - KR-M  : KOREA M Zone  \n \
+  - KR-M2 : KOREA M2 Zone '
+    ZoneName = kargs['zone']
+    del kargs['zone']
+    kargs['zoneid'] = c.getzoneidbyhname(ZoneName)
+    M2Bool = c.IsM2(ZoneName)
+    baseurl = c.geturl(ctype='server', m2=M2Bool)
+    return c.makerequest(kargs, baseurl, my_secretkey)
 
 def startVirtualMachine(**kargs):
     """ Start your VirtualMachine(VM) 
