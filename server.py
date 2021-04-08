@@ -89,11 +89,11 @@ def destroyVirtualMachine(**kargs):
     return c.makerequest(kargs, baseurl, my_secretkey)
 
 def listVirtualIps(**kargs):
-        """ Destroy your VirtualMachine(VM) 
+    """ Destroy your VirtualMachine(VM) 
     * Args:
-        - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
-        - vmid(String, Required): VM id to destory. 
-        """
+    - zone(String, Required) : [KR-CA, KR-CB, KR-M, KR-M2]
+    - vmid(String, Required): VM id to destory. 
+    """
     my_apikey, my_secretkey = c.read_config()
 
     kargs['command'] = 'listVirtualIps'
